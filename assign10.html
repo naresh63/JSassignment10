@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment 10</title>
+</head>
+<body>
+    <script>
+        // 1. Higher Order functions and Call back functions are not same.
+        // In JavaScript, you can  pass a function as an argument to a function. This function that is passed as an argument inside of another function is called a callback function.
+        // Higher-Order Function - accept function as argument or return function.
+
+        // 2.  filter is Higher Order function in Javascript because it accept function as argument.
+
+        // 3. 
+        function copyArrayAndManipulate(arr, instructions) {
+  const output = [];
+  for (let i = 0; i < arr.length; i++) {
+    output.push(instructions(arr[i]));
+  }
+  return output;
+}
+
+function multiplyBy2(input) {
+  return input * 2;
+}
+const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
+
+// // WHICH IS OUR HIGHER-ORDER FUNCTION ?
+// The outer function that takes in a function is our higher-order.
+
+// WHICH IS OUR CALLBACK FUNCTION?
+// The function we insert is our callback function.
+
+        // 4. 
+        // a. I is not defined
+
+        // b. useFunction() - is higher order function
+           
+        
+    </script>
+</body>
+</html>
